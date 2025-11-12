@@ -11,7 +11,12 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var animal 
+var animal = {};
+animal.species = 'Dog';
+animal['name'] = 'Bandit';
+animal.noises = [];
+
+console.log(animal);
 
 
 
@@ -19,18 +24,21 @@ var animal
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var noises = [];
-noises[0] = 'drums';
-noises[1] ='oink';
-noises[2] = 'wink';
-noises[3] = 'pink';
+noises[0] = 'quack';
+noises.push('honk');
+noises.unshift('sneeze');
+noises[noises.length] = 'chirp';
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
-noises.push('woof');
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 /* *******************************************************************
-animal.noises = ['noises'];
-animal.noises = noises.length;
+animal['noises'] = noises;
+animal.noises.push('woosh');
+console.log(animal);
 
 * Step 4 - Review
  *
@@ -52,12 +60,32 @@ animal.noises = noises.length;
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var animals = [];
+animals.push(animal);
+console.log(animals);
+let duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] };
+animals.push(duck);
+console.log(animals); 
+let frog = { species: 'frog', name: 'Jim', noises: ['rabut', 'hops'] };
+let turtle = { species: 'turtle', name: 'Jack', noises: ['crickety', 'noew'] };
+animals.push(frog, turtle);
+console.log(animals);
+console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var friends = [];
+function getRandom(arr){
+  return Math.floor(Math.random() * arr.length);
 
+}
+ var randomINdex = getRandom(animals);
+ var randomFriendName = animals[randomIndex].name;
+ friends.push(randomFriendName);
+ console.log(friends);
+ animals[0]['friends'] = friends;
+ console.log(animals[0]);
+ console.log(animals);
 
 
 /**
