@@ -8,14 +8,15 @@
  * and read every instruction carefully.
  */
 
+const { lastIndexOf } = require("lodash");
+
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-var animal = {};
-animal.species = 'Dog';
-animal['name'] = 'Bandit';
+////////////////////////////////////////////////////////////////////// animal = {};
+const animal = {};
+animal.species = 'dog';
+animal['name'] = 'bandit';
 animal.noises = [];
-
 console.log(animal);
 
 
@@ -23,23 +24,21 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var noises = [];
-noises[0] = 'quack';
-noises.push('honk');
-noises.unshift('sneeze');
-noises[noises.length] = 'chirp';
+const noises = [];
+noises[0] = 'bark';
+noises.push('meow');
+noises.unshift('wink');
+noises[noises.length] = 'howl';
 console.log(noises.length);
-console.log(noises[noises.length - 1]);
-console.log(noises);
 
+console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 /* *******************************************************************
 animal['noises'] = noises;
-animal.noises.push('woosh');
+animal['noises'].push('growl');
 console.log(animal);
-
 * Step 4 - Review
  *
  * 1. What are the different ways you can access properties on objects?
@@ -74,24 +73,8 @@ console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var friends = [];
-function getRandom(arr){
-  return Math.floor(Math.random() * arr.length);
 
-}
- var randomINdex = getRandom(animals);
- var randomFriendName = animals[randomIndex].name;
- friends.push(randomFriendName);
- console.log(friends);
- animals[0]['friends'] = friends;
- console.log(animals[0]);
- console.log(animals);
-
-
-/**
- * Nice work! You're done Part 1. Pat yourself on the back and
- * move onto Part 2 in the file called "functions.js"
- */
+ 
 
 
 
