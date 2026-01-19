@@ -77,6 +77,14 @@ var friends = [];
   function getRandom(arr){
     return Math.floor(Math.random() * arr.length);
   }
+  var randomIndex = getRandomIndex(animal.length);
+  var randomAnimalName = animals[randomIndex].name;
+  friends.push(randomAnimalName);
+  console.log(friends);
+  var propertyName = 'friends';
+  animal[0][propertyName] = friends;
+  
+  
 
 
 
